@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   let(:name) { "simple name" }
 
   it 'is invalid if the level is not between 1 and 1000' do
-    user =  build(:user, level: FFaker::Random.rand(1000..9999))
+    user = build(:user, level: FFaker::Random.rand(1000..999999))
     expect(user).to_not be_valid
   end
 
